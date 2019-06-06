@@ -26,7 +26,10 @@ class ReposList extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-    return {repositories: state.repositories};
+    return {
+        repositories: state.repositories,
+        repository: state.repository
+    };
 }
 
 export default connect(

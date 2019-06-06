@@ -1,5 +1,10 @@
 // list of repositories
-export default (repositories = [], action) => {
+const initialState = {
+    repositories: [],
+    repository: []
+}
+
+export default (state = initialState, action) => {
     switch(action.type){
         case 'FETCH_REPOSITORIES':
             return action.payload;

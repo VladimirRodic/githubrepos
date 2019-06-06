@@ -16,7 +16,11 @@ class RepoDetails extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-    return {repository: state.repository};
+    console.log(state);
+    return {
+        repositories:state.repositories, 
+        repository: state.repository
+    };
 }
 
 export default connect(
