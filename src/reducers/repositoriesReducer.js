@@ -1,15 +1,15 @@
 // list of repositories
-const initialState = {
-    repositories: [],
-    repository: []
-}
+import { initialState } from "./state";
 
 export default (state = initialState, action) => {
     switch(action.type){
         case 'FETCH_REPOSITORIES':
-            return action.payload;
+            return {
+                ...state,
+                repositories: action.payload
+            };
             break;
         default:
-            return [];
+            return state;
     }
 } 

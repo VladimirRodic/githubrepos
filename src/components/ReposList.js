@@ -13,7 +13,9 @@ class ReposList extends React.Component{
     }
 
     render(){
+        console.log(this.props.repositories);
         return (
+            this.props.repositories &&
                 this.props.repositories.map(repo => {
                     return (
                         <div key={repo.id} onClick={() => this.showRepoDetails(repo)}>

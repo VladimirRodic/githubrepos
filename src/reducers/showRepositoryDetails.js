@@ -1,16 +1,15 @@
 // shows repository details
-const initialState = {
-    repositories: [],
-    repository: []
-}
+import { initialState } from "./state";
 
 export default (state = initialState, action) => {
     switch(action.type){
         case 'SHOW_REPOSITORY':
-            //debugger;
-            return action.payload;
+            return {
+                ...state,
+                repository: action.payload    
+            };
             break;
         default:
-            return [];
+            return state;
     }
 } 
